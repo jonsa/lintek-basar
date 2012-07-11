@@ -56,7 +56,7 @@
 	padding-top: 10px;
 }
 .dm-submenu li {
-	border-top: solid 1px #000;
+	border-top: solid 1px #604307;
 	overflow: hidden;
 }
 .dm-submenu li.has-children > a {
@@ -88,5 +88,5 @@
 	padding-left: 25px;
 }
 .dm-submenu li.last {
-	border-bottom: solid 1px #000;
+	border-bottom: solid 1px #604307;
 }
