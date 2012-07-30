@@ -9,7 +9,7 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
 	<script src="http://explorercanvas.googlecode.com/svn/tags/m3/excanvas.compiled.js" type="text/javascript"></script>
 	<![endif]-->
-	<link href="themes/basaret/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="themes/basaret/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<% require themedCSS(Page) %>
 </head>
 
