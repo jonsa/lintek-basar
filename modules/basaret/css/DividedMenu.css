@@ -25,7 +25,7 @@
 .dm-topmenu li.hover {
 	background-color:#DAAA3C;
 }
-.dm-topmenu li.current {
+.dm-topmenu li.current, dm-topmenu li.section {
 	background-color:#E3A20B;
 }
 .dm-topmenu li a {
