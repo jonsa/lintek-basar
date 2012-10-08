@@ -1,76 +1,170 @@
 @CHARSET "UTF-8";
 
-
-body {
-	background: #E3A20B;
-}
-body, p {
-	font-size: 16px;
-}
-#header {
-	padding-top: 320px;
-	background: url('images/basaret.png') #C9DAF0 no-repeat 50% 100%;
-	border-bottom: solid 2px #fff;
-}
-#header > div {
-	margin-bottom: -2px;
-}
-#header #logo-link {
-	display: inline-block;
-	width: 360px;
-	height: 125px;
-	position: absolute;
-	top: 110px;
-	left: 50%;
-	margin-left: -200px;
-}
-#breadcrumbs {
-	padding: 10px 0;
-}
-#article {
-	padding: 20px 0;
-}
-#article > .container > .row > .content.span8 {
-	margin-left: 60px;
-}
-#article .content.has-content > div {
-	-webkit-border-radius: 20px 20px 20px 20px;
-	-moz-border-radius: 20px 20px 20px 20px;
-	border-radius: 20px 20px 20px 20px;
-	background-color:#E9B438;
-	padding: 10px;
-	-webkit-box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.25);
-	box-shadow: 2px 0px 20px 0px rgba(0, 0, 0, 0.25);
-}
-#article .sub-menu {
-	width: 260px;
-}
 a {
-	color: #1780BC;
+	color: #780496;
 }
+
 a:hover {
-	color: #1780BC;
+	color: #780496;
+	text-decoration: underline;
 }
-a.ref {
-	color: #333;
+
+input:focus,textarea:focus {
+	border-color: rgba(51, 27, 75, 0.8);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(51, 27, 75, 0.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(51, 27, 75, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(51, 27, 75, 0.6);
+}
+
+#header {
+	position: relative;
+	height: 190px;
+	color: #fff;
+	background: url('images/logo.png') no-repeat 100px 50% #3B1B4B;
+	margin-bottom: 20px;
+	-webkit-box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.5);
+	box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.5);
+	behavior: url(/themes/basaret/css/PIE.htc);
+}
+
+#header a {
+	color: #fff;
+}
+
+#header a:hover {
+	color: #780496;
+}
+
+#header>div:first-child {
+	position: absolute;
+	top: 50%;
+	left: 225px;
+	margin-top: -2.5em;
+	z-index: 2;
+}
+
+#header .page-title {
+	font-size: 2em;
+	line-height: 1em;
+}
+
+#header .page-tagline {
+	font-size: 1.5em;
+	line-height: 1em;
+}
+
+#karallen {
+	position: absolute;
+	bottom: 0;
+	right: 50px;
+	height: 80px;
+	z-index: 0;
+}
+
+.dm-topmenu {
+	position: absolute;
+	bottom: 0;
+	left: 50px;
+	color: #fff;
+}
+
+.dm-topmenu .nav {
+	margin-bottom: 0;
+}
+
+.breadcrumb a:hover {
 	text-decoration: none;
-	border-bottom: dashed 1px #333;
+}
+
+.nav-list>.active>a,.nav-list>.active>a:hover,.nav-list>.current>a,.nav-list>.current>a:hover
+	{
+	color: white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	background-color: #3B1B4B;
+}
+
+h1.title {
+	margin-bottom: 0.5em;
 }
 
 /* FORMS */
 form ul.optionset {
-        list-style-type: none;
+	list-style-type: none;
 }
+
 form label {
-        font-weight: bold;
+	font-weight: bold;
 }
+
 form ul.optionset li label {
-        display: inline;
-        font-weight: normal;
+	display: inline;
+	font-weight: normal;
 }
+
 form label.required {
-        font-weight: normal;
-        padding: 5px;
-        border: solid 1px #a30000;
-        background-color: #e29032
+	font-weight: normal;
+	padding: 5px;
+	border: solid 1px #a30000;
+	background-color: #e29032
+}
+
+.message.good {
+    color: rgb(70, 136, 71);
+    background-color: rgb(223, 240, 216);
+    border-color: rgb(214, 233, 198);
+}
+
+.message.required, .message.bad {
+	color: #B94A48;
+	background-color: #F2DEDE;
+	border-color: #EED3D7;
+}
+
+.message {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	color: #C09853;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #FCF8E3;
+	border: 1px solid #FBEED5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+@media ( max-width :767px) {
+	body {
+		padding: 0;
+	}
+	body>.container-fluid,body>#article,body>footer {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	input,textarea,select,.uneditable-input {
+		width: 100%;
+	}
+	#header {
+		padding-top: 180px;
+		background-position: 50% 20px;
+		height: auto;
+		width: 100%;
+	}
+	#header>div:first-child {
+		position: inherit;
+		left: auto;
+		top: auto;
+		text-align: center;
+	}
+	#karallen {
+		display: none;
+	}
+	.dm-topmenu {
+		position: inherit;
+		top: auto;
+		left: auto;
+	}
 }

@@ -1,2 +1,2 @@
-<% if Title %><h1>$Title</h1><% end_if %>
+<% if Title %><h1 class="title">$Title</h1><% end_if %>
 $Content
