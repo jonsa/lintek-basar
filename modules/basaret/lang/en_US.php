@@ -61,6 +61,16 @@ $lang['en_US']['ProfilePage']['SINGULARNAME'] = array(
 );
 $lang['en_US']['ProfilePage']['SaveButton'] = 'Save';
 $lang['en_US']['Security']['LOGIN'] = 'Login';
+$lang['en_US']['SongPage']['PLURALNAME'] = array(
+	'Song Pags',
+	50,
+	'Pural name of the object, used in dropdowns and to generally identify a collection of this object in the interface'
+);
+$lang['en_US']['SongPage']['SINGULARNAME'] = array(
+	'Song Page',
+	50,
+	'Singular name of the object, used in dropdowns and to generally identify a single object in the interface'
+);
 $lang['en_US']['StartPage']['PLURALNAME'] = array(
 	'Start Pags',
 	50,

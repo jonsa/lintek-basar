@@ -61,6 +61,16 @@ $lang['sv_SE']['ProfilePage']['SINGULARNAME'] = array(
 );
 $lang['sv_SE']['ProfilePage']['SaveButton'] = 'Spara';
 $lang['en_US']['Security']['LOGIN'] = 'Login';
+$lang['sv_SE']['SongPage']['PLURALNAME'] = array(
+	'Låtsidor',
+	50,
+	'Pural name of the object, used in dropdowns and to generally identify a collection of this object in the interface'
+);
+$lang['sv_SE']['SongPage']['SINGULARNAME'] = array(
+	'Låtsida',
+	50,
+	'Singular name of the object, used in dropdowns and to generally identify a single object in the interface'
+);
 $lang['sv_SE']['StartPage']['PLURALNAME'] = array(
 	'Startsidor',
 	50,
@@ -71,5 +81,6 @@ $lang['sv_SE']['StartPage']['SINGULARNAME'] = array(
 	50,
 	'Singular name of the object, used in dropdowns and to generally identify a single object in the interface'
 );
+$lang['sv_SE']['Page.ss']['HOME'] = 'Hem';
 
 ?>

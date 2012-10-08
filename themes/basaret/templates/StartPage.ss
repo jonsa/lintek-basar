@@ -28,7 +28,7 @@
 		$TopMenu
 	</div>
 	<div class="container-fluid">
-		<ul class="breadcrumb"><li><a href="/">Start</a><span class="divider">&raquo;</span></li><li>$Breadcrumbs</li></ul></div>
+		<ul class="breadcrumb"><li><a href="/"><% _t('HOME','Home') %></a><span class="divider">&raquo;</span></li><li>$Breadcrumbs</li></ul></div>
 	</div>
 	<div id="article"><div class="container-fluid">
 		<div class="row-fluid">
