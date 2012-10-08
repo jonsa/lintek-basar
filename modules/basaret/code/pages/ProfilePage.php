@@ -16,18 +16,7 @@ class ProfilePage_Controller extends Page_Controller {
 			return '';
 		$signup = $member->getSignup();
 
-		$fields = $member->getRegistrationFields();
-		$fields->removeByName('Password');
-
-		$fields
-			->push($signup->dbObject('AskToMentor')
-					->scaffoldFormField($signup->fieldLabel('AskToMentor')));
-		$fields
-			->push($signup->dbObject('AskToShadow')
-					->scaffoldFormField($signup->fieldLabel('AskToShadow')));
-		$fields
-			->push($signup->dbObject('AskToParty')
-					->scaffoldFormField($signup->fieldLabel('AskToParty')));
+		$fields = $member->getProfileFields();
 
 		$actions = new FieldSet(new FormAction('doSave', _t('ProfilePage.SaveButton', 'Save')),
 			new LiteralField('ChangePassword',

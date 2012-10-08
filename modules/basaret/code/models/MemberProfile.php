@@ -13,7 +13,8 @@ class MemberProfile extends DataObjectDecorator {
 						'Signups' => 'MentorSignup'
 				),
 				'field_labels' => array(
-						'DidBaseYear' => _t('MemberProfile.DidBaseYear', 'Completed Base Year (year)')
+						'DidBaseYear' => _t('MemberProfile.DidBaseYear',
+							'Completed Base Year (year)')
 				)
 		);
 	}
@@ -44,7 +45,7 @@ class MemberProfile extends DataObjectDecorator {
 		return $this->signup_cache;
 	}
 
-	public function getRegistrationFields() {
+	public function getProfileFields() {
 		$fields = new FieldSet();
 		$fields
 			->push($this->owner->dbObject('FirstName')
@@ -53,12 +54,36 @@ class MemberProfile extends DataObjectDecorator {
 			->push($this->owner->dbObject('Surname')
 					->scaffoldFormField($this->owner->fieldLabel('Surname')));
 		$fields->push(new EmailField('Email', $this->owner->fieldLabel('Email')));
-		$fields->push($password = new ConfirmedPasswordField('Password', $this->owner->fieldLabel('Password')));
-		$password->minLength = 1;
 		$fields->push($this->getProgramDropdown());
 		$fields
 			->push($this->owner->dbObject('DidBaseYear')
 					->scaffoldFormField($this->owner->fieldLabel('DidBaseYear')));
+
+		$signup = $this->getSignup();
+		if ($this->owner->Program != 'Alumn') {
+			$fields
+				->push($signup->dbObject('AskToMentor')
+						->scaffoldFormField($signup->fieldLabel('AskToMentor')));
+			$fields
+				->push($signup->dbObject('AskToShadow')
+						->scaffoldFormField($signup->fieldLabel('AskToShadow')));
+		}
+		$fields
+			->push($signup->dbObject('AskToParty')
+					->scaffoldFormField($signup->fieldLabel('AskToParty')));
+		return $fields;
+	}
+
+	public function getRegistrationFields() {
+		$fields = $this->getProfileFields();
+		$fields
+			->insertAfter($password = new ConfirmedPasswordField('Password',
+					$this->owner->fieldLabel('Password')), 'Email');
+		$password->minLength = 1;
+		$fields->removeByName('AskToMentor');
+		$fields->removeByName('AskToShadow');
+		$fields->removeByName('AskToParty');
+		
 		return $fields;
 	}
 
@@ -171,7 +196,8 @@ class MemberProfile extends DataObjectDecorator {
 				'Övrigt'
 		);
 
-		$dropdown = new DropdownField('Program', $this->owner->fieldLabel('Program'), array_combine($values, $values));
+		$dropdown = new DropdownField('Program', $this->owner->fieldLabel('Program'),
+			array_combine($values, $values));
 		$dropdown->setHasEmptyDefault(true);
 		$dropdown->setEmptyString(_t('MemberProfile.ChooseProgram', '(Choose Program)'));
 
