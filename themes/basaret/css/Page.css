@@ -100,6 +100,12 @@ form label {
 	font-weight: bold;
 }
 
+form label.right {
+	font-weight: normal;
+	font-style: italic;
+	font-size: 0.9em;
+}
+
 form ul.optionset li label {
 	display: inline;
 	font-weight: normal;
