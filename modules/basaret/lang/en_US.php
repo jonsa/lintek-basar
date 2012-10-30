@@ -2,6 +2,16 @@
 
 global $lang;
 
+$lang['en_US']['EditableMemberField']['PLURALNAME'] = array(
+	'Member Fields',
+	50,
+	'Pural name of the object, used in dropdowns and to generally identify a collection of this object in the interface'
+);
+$lang['en_US']['EditableMemberField']['SINGULARNAME'] = array(
+	'Member Field',
+	50,
+	'Singular name of the object, used in dropdowns and to generally identify a single object in the interface'
+);
 $lang['en_US']['LogoutPage']['PLURALNAME'] = array(
 	'Logout Pags',
 	50,
@@ -81,5 +91,16 @@ $lang['en_US']['StartPage']['SINGULARNAME'] = array(
 	50,
 	'Singular name of the object, used in dropdowns and to generally identify a single object in the interface'
 );
+$lang['en_US']['SubmittedMemberField']['PLURALNAME'] = array(
+	'Submitted Member Fields',
+	50,
+	'Pural name of the object, used in dropdowns and to generally identify a collection of this object in the interface'
+);
+$lang['en_US']['SubmittedMemberField']['SINGULARNAME'] = array(
+	'Submitted Member Field',
+	50,
+	'Singular name of the object, used in dropdowns and to generally identify a single object in the interface'
+);
+$lang['en_US']['UserDefinedFormDecorator']['AlreadySubmitted'] = 'Already submitted';
 
 ?>

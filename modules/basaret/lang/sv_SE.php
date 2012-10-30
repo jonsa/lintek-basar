@@ -2,6 +2,16 @@
 
 global $lang;
 
+$lang['sv_SE']['EditableMemberField']['PLURALNAME'] = array(
+	'Medlemsfält',
+	50,
+	'Pural name of the object, used in dropdowns and to generally identify a collection of this object in the interface'
+);
+$lang['sv_SE']['EditableMemberField']['SINGULARNAME'] = array(
+	'Medlemsfält',
+	50,
+	'Singular name of the object, used in dropdowns and to generally identify a single object in the interface'
+);
 $lang['sv_SE']['LogoutPage']['PLURALNAME'] = array(
 	'Logga ut sidor',
 	50,
@@ -81,6 +91,17 @@ $lang['sv_SE']['StartPage']['SINGULARNAME'] = array(
 	50,
 	'Singular name of the object, used in dropdowns and to generally identify a single object in the interface'
 );
+$lang['sv_SE']['SubmittedMemberField']['PLURALNAME'] = array(
+	'Skickat medlemsfält',
+	50,
+	'Pural name of the object, used in dropdowns and to generally identify a collection of this object in the interface'
+);
+$lang['sv_SE']['SubmittedMemberField']['SINGULARNAME'] = array(
+	'Skickat medlemsfält',
+	50,
+	'Singular name of the object, used in dropdowns and to generally identify a single object in the interface'
+);
+$lang['sv_SE']['UserDefinedFormDecorator']['AlreadySubmitted'] = 'Redan skickat';
 $lang['sv_SE']['Page.ss']['HOME'] = 'Hem';
 
 ?>
