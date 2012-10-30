@@ -106,6 +106,12 @@ form label.right {
 	font-size: 0.9em;
 }
 
+form .field.checkbox label.right {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1em;
+}
+
 form ul.optionset li label {
 	display: inline;
 	font-weight: normal;
