@@ -24,7 +24,6 @@
 			<p class="page-title">$SiteConfig.Title</p>
 			<p class="page-tagline">$SiteConfig.Tagline</p>
 		</div>
-		<img id="karallen" src="/$ThemeDir/css/images/karallen.png" alt="">
 		$TopMenu
 	</div>
 	<div class="container-fluid">

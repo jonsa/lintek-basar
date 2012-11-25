@@ -9,4 +9,8 @@ class SubmittedMemberField extends SubmittedFormField {
 			return $member->Name;
 		return '';
 	}
+	
+	public function getExportValue() {
+		return $this->getFormattedValue();
+	}
 }
